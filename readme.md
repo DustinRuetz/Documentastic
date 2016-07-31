@@ -2,7 +2,7 @@
 
 Documentastic is a Markdown-to-HTML converter that is designed to be flexible, lightweight, and platform-agnostic.
 
-It is intended to be used locally, i.e. dev\*.md files compile to public\*.html files, the latter of which can be viewed locally in the browser whether on a desktop computer, tablet, phone, etc.
+It is intended to be used locally, i.e. `dev\*.md` files compile to `public\*.html` files, the latter of which can be viewed locally in the browser whether on a desktop computer, tablet, phone, etc.
 
 ## Installation & Usage
 
@@ -11,7 +11,7 @@ npm install
 gulp
 ```
 
-1. Make a copy of `template.md` and rename it.
+1. Make a copy of `dev\template.md` and rename it.
 1. Open the file and document until your heart's content.
 
 ## Philosophy
