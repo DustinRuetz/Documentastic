@@ -1,8 +1,6 @@
 # Documentastic
 
-Documentastic is a Markdown-to-HTML converter that is designed to be flexible, lightweight, and platform-agnostic.
-
-It is intended to be used locally, i.e. `dev\*.md` files compile to `public\*.html` files, the latter of which can be viewed locally in the browser whether on a desktop computer, tablet, phone, etc.
+A Markdown-to-HTML converter that is designed to be flexible, lightweight, and platform-agnostic. Documentastic is intended to be used locally, i.e. `dev\*.md` files compile to `public\*.html` files, the latter of which can be viewed locally in the browser whether on a desktop computer, tablet, phone, etc.
 
 ## Installation & Usage
 
