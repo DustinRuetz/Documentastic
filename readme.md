@@ -14,11 +14,12 @@ gulp
 
 ## Philosophy
 
-Documentation is an invaluable tool in development (and, as I have found, also in life). The intention of this Gulp task is threefold:
+Documentation is an invaluable tool in development (and, as I have found, also in life). The goal of this project is as follows:
 
-1. To use the elegant simplicity of Markdown to write maintainable, well-formatted documentation.
-1. To dynamically generate a table-of-contents (TOC) from the document's headings.
-1. To compile the Markdown file into a platform-agnostic HTML document.
+1. To use the elegant simplicity of Markdown to write maintainable, well-formatted documentation;
+1. To dynamically generate a table-of-contents (TOC) from the document's headings;
+1. To compile the Markdown file into a platform-agnostic HTML document; and
+1. If desired, to be able to print out documentation and have it be well-formed.
 
 ## Features
 
@@ -27,6 +28,7 @@ Documentation is an invaluable tool in development (and, as I have found, also i
 * Gulp `watch` tasks to monitor/update changes to `.md` `.css` `.js` files.
 * CSS styling via the [GitHub Markdown Stylesheet][gh-md-ss].
 * Smooth-scrolling on all internal document links via [jquery-smooth-scroll][jq-ss].
+* All documents are printer-friendly by default.
 
 ## Licence
 
