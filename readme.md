@@ -40,7 +40,7 @@ Documentation is an invaluable tool in development (and, as I have found, also i
 * Automatic Markdown-to-HTML conversion provided by [gulp-marked][gulp-marked].
 * Gulp `watch` tasks to monitor/update changes to `.md` `.css` `.js` files.
 * CSS styling provided by the [GitHub Markdown Stylesheet][gh-md-ss].
-* Smooth-scrolling on all internal document links via [jquery-smooth-scroll][jq-ss].
+* Smooth-scrolling on all internal links via [jquery-smooth-scroll][jq-ss].
 * `target="_blank"` attribute automatically added to all external links.
 * Documents are designed to be responsive and scale gracefully according to device screen size.
 * All documents are printer-friendly by default.
