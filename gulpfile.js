@@ -5,15 +5,10 @@ var doctoc = require("gulp-doctoc");
 var marked = require("gulp-marked");
 
 // default tasks to run on "gulp" command
-gulp.task("default", [
-	"docTasks",
-	"styleTasks",
-	"scriptTasks"
-], function() {
+gulp.task("default", ["docTasks", "readmeTOC"], function() {
 	// files to watch and tasks to run
 	gulp.watch("dev/*.md", ["docTasks"]);
-	gulp.watch("dev/*.css", ["styleTasks"]);
-	gulp.watch("dev/*.js", ["scriptTasks"]);
+	gulp.watch("readme.md", ["readmeTOC"]);
 });
 
 // docTasks
@@ -27,16 +22,11 @@ gulp.task("docTasks", function() {
 		.pipe(gulp.dest("public/"));
 });
 
-// styleTasks
-// 1) pipes all CSS into destination
-gulp.task("styleTasks", function() {
-	return gulp.src("dev/*.css")
-		.pipe(gulp.dest("public/"));
-});
-
-// scriptTasks
-// 1) pipes all JS into destination
-gulp.task("scriptTasks", function() {
-	return gulp.src("dev/*.js")
-		.pipe(gulp.dest("public/"));
+// readmeTOC
+// 1) pipes readme.md into doctoc
+// 2) doctoc generates TOC, then pipes into destination
+gulp.task("readmeTOC", function() {
+	return gulp.src("readme.md")
+		.pipe(doctoc())
+		.pipe(gulp.dest(""));
 });

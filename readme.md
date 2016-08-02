@@ -1,8 +1,21 @@
 # Documentastic
 
-A Markdown-to-HTML converter that is designed to be flexible, lightweight, and platform-agnostic. Documentastic is intended to be used locally, i.e. `dev\*.md` files compile to `public\*.html` files, the latter of which can be viewed locally in the browser whether on a desktop computer, tablet, phone, etc.
+A Markdown-to-HTML converter that is designed to be flexible, lightweight, and platform-agnostic.
 
-## Installation & Usage
+This tool was developed with the intention of being used locally, i.e. `dev\*.md` files compile to `public\*.html` files, the latter of which can be viewed locally in a browser regardless of device. My personal use-case employs [BitTorrent Sync](bt-sync) to sync the contents of `public\` to my mobile phone, which ensures I always have access to my documentation on my two primary computing platforms.
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Installation and Usage](#installation-and-usage)
+- [Philosophy](#philosophy)
+- [Features](#features)
+- [Licence](#licence)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Installation and Usage
 
 ```
 npm install
@@ -23,16 +36,20 @@ Documentation is an invaluable tool in development (and, as I have found, also i
 
 ## Features
 
-* Dynamically-generated table-of-contents (TOC) via [gulp-doctoc][gulp-doctoc].
-* Automatic Markdown-to-HTML conversion via [gulp-marked][gulp-marked].
+* Dynamically-generated table-of-contents (TOC) provided by [gulp-doctoc][gulp-doctoc].
+* Automatic Markdown-to-HTML conversion provided by [gulp-marked][gulp-marked].
 * Gulp `watch` tasks to monitor/update changes to `.md` `.css` `.js` files.
-* CSS styling via the [GitHub Markdown Stylesheet][gh-md-ss].
+* CSS styling provided by the [GitHub Markdown Stylesheet][gh-md-ss].
 * Smooth-scrolling on all internal document links via [jquery-smooth-scroll][jq-ss].
+* `target="_blank"` attribute automatically added to all external links.
+* Documents are designed to be responsive and scale gracefully according to device screen size.
 * All documents are printer-friendly by default.
 
 ## Licence
 
 [MIT Licence][mit-licence]
+
+[bt-sync]: https://getsync.com/
 
 [gulp-doctoc]: https://www.npmjs.com/package/gulp-doctoc
 [gulp-marked]: https://www.npmjs.com/package/gulp-marked
