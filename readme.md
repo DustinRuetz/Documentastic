@@ -4,7 +4,7 @@ A Markdown-to-HTML converter that is designed to be flexible, lightweight, and p
 
 This tool was developed with the intention of being used locally, i.e. `dev/*.md` files compile to `public/*.html` files, the latter of which can be viewed locally in a browser regardless of device.
 
-My personal use-case employs [BitTorrent Sync](bt-sync) to sync the contents of `public/` to my mobile phone, which ensures I always have access to my documentation on my two primary computing platforms.
+My personal use-case employs [BitTorrent Sync][bt-sync] to sync the contents of `public/` to my mobile phone, which ensures I always have access to my documentation on my two primary computing platforms.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
