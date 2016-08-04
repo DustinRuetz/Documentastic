@@ -52,8 +52,8 @@ Documentation is an invaluable tool in development (and, as I have found, also i
 * **Stylin'**: CSS styling courtesy of the [GitHub Markdown Stylesheet][gh-md-ss].
 * **Printer-Friendly**: Documents are printer-friendly by default.
 * **Smooth Moves**: Smooth-scrolling is added to all internal links (i.e. everything in the document's TOC) courtesy of [jquery-smooth-scroll][jq-ss].
-* The `title` for all documents is automatically generated from the contents of the `h1` element.
 * The `target="_blank"` attribute is automatically added to all external links.
+* The `title` for all documents is automatically generated from the contents of the `<h1>` element.
 
 ## Licence
 
