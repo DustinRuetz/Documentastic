@@ -2,30 +2,33 @@
 
 A Markdown-to-HTML converter that is designed to be flexible, lightweight, and platform-agnostic.
 
-This tool was developed with the intention of being used locally, i.e. `dev\*.md` files compile to `public\*.html` files, the latter of which can be viewed locally in a browser regardless of device.
+This tool was developed with the intention of being used locally, i.e. `dev/*.md` files compile to `public/*.html` files, the latter of which can be viewed locally in a browser regardless of device.
 
-My personal use-case employs [BitTorrent Sync](bt-sync) to sync the contents of `public\` to my mobile phone, which ensures I always have access to my documentation on my two primary computing platforms.
+My personal use-case employs [BitTorrent Sync](bt-sync) to sync the contents of `public/` to my mobile phone, which ensures I always have access to my documentation on my two primary computing platforms.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 
-- [Installation and Usage](#installation-and-usage)
+- [Installation](#installation)
+- [Usage](#usage)
 - [Philosophy](#philosophy)
 - [Features](#features)
 - [Licence](#licence)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Installation and Usage
+## Installation
 
 ```
 npm install
-gulp
 ```
 
-1. Make a copy of `dev\template.md` and rename it.
-1. Open the file and document until your heart's content.
+## Usage
+
+1. Make a copy of `dev/template.md` and rename it.
+1. Run the `gulp` command to start the tasks.
+1. Open the new file and document until your heart is content.
 
 ## Philosophy
 
@@ -39,10 +42,12 @@ Documentation is an invaluable tool in development (and, as I have found, also i
 ## Features
 
 * Dynamically-generated table-of-contents (TOC) provided by [gulp-doctoc][gulp-doctoc].
-* Automatic Markdown-to-HTML conversion provided by [gulp-marked][gulp-marked].
-* Gulp `watch` tasks to monitor/update changes to `.md` `.css` `.js` files.
+* Markdown-to-HTML conversion provided by [gulp-marked][gulp-marked].
+* Code injection of mandatory `html`, `head`, and `body` elements provided by [gulp-inject][gulp-inject].
+* Proper line breaks and indentation in compiled HTML document provided by [gulp-prettify][gulp-prettify].
 * CSS styling provided by the [GitHub Markdown Stylesheet][gh-md-ss].
 * Smooth-scrolling on all internal links via [jquery-smooth-scroll][jq-ss].
+* Document's `title` automatically generated from `h1` tag contents.
 * `target="_blank"` attribute automatically added to all external links.
 * Documents are designed to be responsive and scale gracefully according to device screen size.
 * All documents are printer-friendly by default.
@@ -63,6 +68,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [gulp-doctoc]: https://www.npmjs.com/package/gulp-doctoc
 [gulp-marked]: https://www.npmjs.com/package/gulp-marked
+[gulp-inject]: https://www.npmjs.com/package/gulp-inject
+[gulp-prettify]: https://www.npmjs.com/package/gulp-prettify
 [gh-md-ss]: https://gist.github.com/tuzz/3331384
 [jq-ss]: https://www.npmjs.com/package/jquery-smooth-scroll
 
