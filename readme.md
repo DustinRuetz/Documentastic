@@ -1,6 +1,6 @@
 # Documentastic
 
-A Markdown-to-HTML converter that is designed to be flexible, lightweight, and platform-agnostic.
+A Markdown-to-HTML converter that is feature-rich, flexible, lightweight, and platform-agnostic.
 
 This tool was developed with the intention of being used locally, i.e. `dev/*.md` files compile to `public/*.html` files, the latter of which can be viewed locally in a browser regardless of device.
 
