@@ -6,4 +6,5 @@ node_modules
 !template.md
 *.html
 !template.html
-!partials/*.html
+!p1-top.html
+!p2-bottom.html
