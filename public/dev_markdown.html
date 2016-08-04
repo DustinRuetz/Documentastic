@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>(automatically generated from `h1` tag contents on page load)</title>
+		<link rel="stylesheet" href="styles/style.css">
+		<link rel="icon" href="icons/favicon.png">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+		<h1 id="markdown">Markdown</h1>
+		<p>Notes on using Markdown.</p>
+		<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+		<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+		<ul>
+			<li><a href="#resources">Resources</a></li>
+			<li><a href="#syntax">Syntax</a>
+				<ul>
+					<li><a href="#headings">Headings</a></li>
+					<li><a href="#paragraphs">Paragraphs</a></li>
+					<li><a href="#styling-text">Styling Text</a>
+						<ul>
+							<li><a href="#bold">Bold</a></li>
+							<li><a href="#italic">Italic</a></li>
+							<li><a href="#strikethrough">Strikethrough</a></li>
+						</ul>
+					</li>
+					<li><a href="#links">Links</a></li>
+					<li><a href="#images">Images</a></li>
+					<li><a href="#lists">Lists</a>
+						<ul>
+							<li><a href="#unordered-lists">Unordered Lists</a></li>
+							<li><a href="#ordered-lists">Ordered Lists</a></li>
+							<li><a href="#nested-lists">Nested Lists</a></li>
+							<li><a href="#advanced-nesting">Advanced Nesting</a></li>
+						</ul>
+					</li>
+					<li><a href="#horizontal-rule">Horizontal Rule</a></li>
+					<li><a href="#blockquotes">Blockquotes</a></li>
+					<li><a href="#code-blocks-and-syntax-highlighting">Code Blocks and Syntax Highlighting</a></li>
+					<li><a href="#non-standard-features">Non-standard Features</a>
+						<ul>
+							<li><a href="#tables">Tables</a></li>
+							<li><a href="#checkboxes">Checkboxes</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+		<h2 id="resources">Resources</h2>
+		<ul>
+			<li><a href="http://masteringmarkdown.com">Mastering Markdown</a> video series by Wes Bos.</li>
+		</ul>
+		<h2 id="syntax">Syntax</h2>
+		<ul>
+			<li>Markdown uses its own syntax that allows users to write simplified HTML.</li>
+			<li>Markdown files, when opened in a Markdown viewer, are compiled into valid HTML.</li>
+		</ul>
+		<h3 id="headings">Headings</h3>
+		<p>Use one hashtag for an <code>&lt;h1&gt;</code>, followed by the heading text.</p>
+		<pre><code># This renders as an &lt;h1&gt; heading.
+</code></pre>
+		<p>Use two hashtags for an <code>&lt;h2&gt;</code>, followed by the heading text, three hashtags for an <code>&lt;h3&gt;</code>, etc.</p>
+		<h3 id="paragraphs">Paragraphs</h3>
+		<ul>
+			<li>Simply type the text - no special characters needed.</li>
+			<li>
+				<p>Paragraphs must be separated by one blank line, otherwise they will be rendered on the same line.</p>
+				<pre><code>  This is the first paragraph.
+
+  This is the second paragraph.
+</code></pre></li>
+		</ul>
+		<h3 id="styling-text">Styling Text</h3>
+		<h4 id="bold">Bold</h4>
+		<ul>
+			<li>Text wrapped with two asterisks on either side (**example**) will be bolded.</li>
+			<li>
+				<p>Alternatively, text wrapped with two underscores on either side (__example__) will also be bolded.</p>
+				<pre><code>  This will render **bold** text.
+
+  This will also render __bold__ text.
+</code></pre></li>
+		</ul>
+		<h4 id="italic">Italic</h4>
+		<ul>
+			<li>Text wrapped with underscores on either side (_example_) will be italicized.</li>
+			<li>
+				<p>Alternatively, text wrapped with asterisks on either side (*example*) will also be italicized.</p>
+				<pre><code>  This will render _italicized_ text.
+
+  This will also render *italicized* text.
+</code></pre></li>
+		</ul>
+		<h4 id="strikethrough">Strikethrough</h4>
+		<ul>
+			<li>
+				<p>Text placed between two tildes on either side (~~example~~) will render as strikethrough text.</p>
+				<pre><code>  This will render as ~~strikethrough~~ text.
+</code></pre></li>
+		</ul>
+		<h3 id="links">Links</h3>
+		<p>There are four ways to use links in Markdown.</p>
+		<ul>
+			<li>
+				<p>Wrap the URL with angle brackets (&lt;&gt;).</p>
+				<pre><code>  &lt;https://github.com&gt;
+</code></pre></li>
+			<li>
+				<p>Wrap the link text in square brackets [] and the URL in parentheses ().</p>
+				<pre><code>  Go to [GitHub.com](https://github.com) to learn more.
+</code></pre></li>
+			<li>
+				<p>To include a title/tooltip that will display when the user hovers over the link, use the above example&#39;s syntax and add the title in quotes.</p>
+				<pre><code>  Go to [GitHub.com](https://github.com &quot;Click to go the GitHub homepage&quot;) to learn more.
+</code></pre></li>
+			<li>
+				<p>To keep the text as readable as possible, use the &quot;link/reference&quot; method: place the link inline and reference its URL at the bottom of the document (without the backslash \ character).</p>
+				<pre><code>  Visit the [first website][first-website], created by Tim Berners-Lee.
+  ...
+  (rest of document)
+  ...
+  \[first-website]: http://info.cern.ch/hypertext/WWW/TheProject.html
+</code></pre></li>
+		</ul>
+		<h3 id="images">Images</h3>
+		<p>Images are indicated with an exclamation mark (!), alternate text is placed in square brackets [], the filepath/URL is placed in parentheses (), and finally a title/tooltip can be included in quotes (&quot;&quot;).</p>
+		<pre><code>    ![Alternate text for the image](path/to/image.png &quot;Title text for the image&quot;)
+</code></pre>
+		<p>Alternatively, images can be used in a similar way to the &quot;link/reference&quot; method.</p>
+		<pre><code>    ## Gallery
+    ![Alternate text for the image][image-1]
+    ...
+    (rest of document)
+    ...
+    \[image-1]: http://github.com/logo/png
+</code></pre>
+		<h3 id="lists">Lists</h3>
+		<h4 id="unordered-lists">Unordered Lists</h4>
+		<p>Unordered lists can use the minus, plus, and asterisk characters - all will be rendered as bullet points.</p>
+		<pre><code>    - Item 1
+    - Item 2
+    - Item 3
+
+    + Item 1
+    + Item 2
+    + Item 3
+
+    * Item 1
+    * Item 2
+    * Item 3
+</code></pre>
+		<h4 id="ordered-lists">Ordered Lists</h4>
+		<p>Each ordered list item should be preceded by <code>1.</code> - the list items will be numbered correctly when compiled.</p>
+		<pre><code>1. Number One
+1. Number Two
+1. Number Three
+</code></pre>
+		<h4 id="nested-lists">Nested Lists</h4>
+		<p>Add subitems to list items using tab indentation.</p>
+		<pre><code>1. Go to the store.
+    - Buy milk.
+    - Buy bread.
+1. Come home.
+</code></pre>
+		<h4 id="advanced-nesting">Advanced Nesting</h4>
+		<p>Add additional elements (paragraphs, images, links, etc.) using line breaks and tab indentation.</p>
+		<pre><code>1. Create a new HTML file.
+    - Include the following content:
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aut sit ipsum deleniti obcaecati quae. Voluptates aliquam autem illo ipsum quae blanditiis, quisquam fuga ullam!
+
+        ![Alternate text for the image](path/to/image.png)
+
+        [Link to full image](http://example.com/image.png)
+
+1. Create a new CSS file.
+</code></pre>
+		<h3 id="horizontal-rule">Horizontal Rule</h3>
+		<ul>
+			<li>To create a horizontal rule use three hyphens (-).</li>
+			<li>
+				<p>Make sure that there are blank line breaks above and beneath, otherwise it will inadvertently render a heading.</p>
+				<pre><code>  ## First section
+
+  ---
+
+  ## Second section
+
+  ---
+
+  ## Third section
+</code></pre></li>
+		</ul>
+		<h3 id="blockquotes">Blockquotes</h3>
+		<ul>
+			<li>
+				<p>Create a single-line blockquote using the right-pointing chevron (&gt;).</p>
+				<pre><code>  &gt; A single-line blockquote. ~~ William Shakespeare
+</code></pre></li>
+			<li>
+				<p>Create a multi-line blockquote by starting each line with the chevron.</p>
+				<pre><code>  &gt; A multi-line blockquote.
+  &gt; 
+  &gt; ~~ Socrates
+</code></pre></li>
+		</ul>
+		<h3 id="code-blocks-and-syntax-highlighting">Code Blocks and Syntax Highlighting</h3>
+		<p>There are three ways to indicate code, and a <code>diff</code> feature for highlighting code changes.</p>
+		<ul>
+			<li>
+				<p>Indent the code block.</p>
+				<pre><code>  var a = 1;
+  var b = a + 1;
+</code></pre></li>
+			<li>
+				<p>Begin the code block with three backticks (`) and the name of the language, write the lines of code, and then end with three more backticks.</p>
+			</li>
+			<li>
+				<p><strong>Note</strong>: the name of the language is not required.</p>
+				<pre><code>  ```js
+  var age = 25;
+  var name = &quot;Past Dustin&quot;;
+  ```
+</code></pre></li>
+			<li>
+				<p>If writing inline code, wrap it in backticks (`).</p>
+				<pre><code>  This `&lt;p&gt;` will be rendered as code.
+</code></pre></li>
+			<li>
+				<p>The <code>diff</code> feature is used to visually indicate changes (lines beginning with minus (-) will be rendered as red deletions, while lines beginning with plus (+) will be rendered as green additions.</p>
+				<pre><code>  ```diff
+  var x = 100;
+  - var y = 200;
+  + var y = 300;
+  ```
+</code></pre></li>
+		</ul>
+		<h3 id="non-standard-features">Non-standard Features</h3>
+		<p>Both tables and checkboxes are not included in the official Markdown specification, however many Markdown readers do support them.</p>
+		<h4 id="tables">Tables</h4>
+		<ul>
+			<li>Columns are indicated by using the pipe character (|).</li>
+			<li>Rows are indicated by each line wrapped in pipe characters.</li>
+			<li>
+				<p>The second line of the table controls the column&#39;s text alignment.</p>
+				<pre><code>  | Column 1 Heading | Column 2 Heading | Column 3 Heading |
+  |:-----------------|:----------------:|-----------------:|
+  | Left-aligned | Centered | Right-aligned |
+</code></pre></li>
+		</ul>
+		<h4 id="checkboxes">Checkboxes</h4>
+		<ul>
+			<li>Checkboxes are added by using a list item along with a set of square brackets containing a space [ ].</li>
+			<li>
+				<p>To check off a list item, place an &quot;x&quot; inside of the square brackets.</p>
+				<pre><code>  - [ ] Task 1
+  - [x] Task 2
+  - [ ] Task 3
+</code></pre></li>
+		</ul>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js"></script>
+		<script src="scripts/script.js"></script>
+	</body>
+
+</html>
