@@ -1,7 +1,9 @@
 node_modules
 .DS_Store
+.sync
 *.md
 !readme.md
 !template.md
 *.html
 !template.html
+!partials/*.html
