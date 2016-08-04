@@ -1,8 +1,8 @@
 # Documentastic
 
-A Markdown-to-HTML converter that is feature-rich, flexible, lightweight, and platform-agnostic.
+A Markdown-to-HTML documentation generator that is feature-rich, flexible, lightweight, and platform-agnostic.
 
-This tool was developed with the intention of being used locally, i.e. `dev/*.md` files compile to `public/*.html` files, the latter of which can be viewed locally in a browser regardless of device.
+This tool was developed with the intention of being used locally, i.e. `dev/*.md` files compile to `public/*.html` files, the latter of which can be viewed locally in any browser regardless of device. An example of the output can be found by viewing my notes on Markdown syntax in `public/dev_markdown.html`.
 
 My personal use-case employs [BitTorrent Sync][bt-sync] to sync the contents of `public/` to my mobile phone, which ensures I always have access to my documentation on my two primary computing platforms.
 
@@ -36,21 +36,24 @@ Documentation is an invaluable tool in development (and, as I have found, also i
 
 1. To use the elegant simplicity of Markdown to write maintainable, well-formatted documentation;
 1. To dynamically generate a table-of-contents (TOC) from the document's headings;
-1. To compile the Markdown file into a platform-agnostic HTML document; and
+1. To compile the Markdown file into a responsive, spec-compliant, platform-agnostic HTML document; and
 1. If desired, to be able to print out documentation and have it be well-formed.
 
 ## Features
 
-* Dynamically-generated table-of-contents (TOC) provided by [gulp-doctoc][gulp-doctoc].
-* Markdown-to-HTML conversion provided by [gulp-marked][gulp-marked].
-* Code injection of mandatory `html`, `head`, and `body` elements provided by [gulp-inject][gulp-inject].
-* Proper line breaks and indentation in compiled HTML document provided by [gulp-prettify][gulp-prettify].
-* CSS styling provided by the [GitHub Markdown Stylesheet][gh-md-ss].
-* Smooth-scrolling on all internal links via [jquery-smooth-scroll][jq-ss].
-* Document's `title` automatically generated from `h1` tag contents.
-* `target="_blank"` attribute automatically added to all external links.
-* Documents are designed to be responsive and scale gracefully according to device screen size.
-* All documents are printer-friendly by default.
+* **Efficient**: Only the documentation files that have been modified are run through the task. Courtesy of [gulp-changed][gulp-changed].
+* **Table of Contents**: Manually trying to maintain TOCs is a headache. This is why Documentastic uses [gulp-doctoc][gulp-doctoc] to automatically generate a dynamic TOC for you based on the structure of your document's headings.
+* **Easy to Read, Easy to Write**: Reading and writing in Markdown couldn't be simpler... as long as you're at a computer. If you're on a mobile device, why should you download yet _another_ app just to read Markdown files? Documentastic uses [gulp-marked][gulp-marked] to take your Markdown files and create platform-agnostic HTML documents from them so that they can be read in any browser.
+* **Function or Form - Why Not Both?**: For best browser compatibility and to avoid nasty surprises, HTML documents should be well-formed and comply with the W3C specification.
+	* Documentastic keeps your working Markdown file clean _and_ your published HTML document compliant by using [gulp-inject][gulp-inject] to inject HTML code partials containing the required `<doctype>`, `<html>`, `<head>`, and `<body>` elements.
+	* If you want to review the published HTML document's code directly, [gulp-prettify][gulp-prettify] has got you covered with proper line breaks and indentation.
+* **Platform-Agnostic**: Free ~~yourself~~ your documentation from the chains of platform dependency and vendor lock-in. As long as you have a browser, you can read your documents.
+* **Responsive**: Documents are responsive and will scale gracefully according to device screen size.
+* **Stylin'**: CSS styling courtesy of the [GitHub Markdown Stylesheet][gh-md-ss].
+* **Printer-Friendly**: Documents are printer-friendly by default.
+* **Smooth Moves**: Smooth-scrolling is added to all internal links (i.e. everything in the document's TOC) courtesy of [jquery-smooth-scroll][jq-ss].
+* The `title` for all documents is automatically generated from the contents of the `h1` element.
+* The `target="_blank"` attribute is automatically added to all external links.
 
 ## Licence
 
@@ -66,6 +69,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 [bt-sync]: https://getsync.com/
 
+[gulp-changed]: https://www.npmjs.com/package/gulp-changed
 [gulp-doctoc]: https://www.npmjs.com/package/gulp-doctoc
 [gulp-marked]: https://www.npmjs.com/package/gulp-marked
 [gulp-inject]: https://www.npmjs.com/package/gulp-inject
