@@ -1,9 +1,12 @@
+"use strict";
+
 // required modules
 const gulp = require("gulp"),
 		changed = require("gulp-changed"),
 		doctoc = require("gulp-doctoc"),
 		marked = require("gulp-marked"),
 		inject = require("gulp-inject"),
+		dom = require("gulp-dom"),
 		prettify = require("gulp-prettify");
 
 // default tasks to run on "gulp" command
@@ -22,7 +25,8 @@ gulp.task("default", [
 // 3) doctoc generates TOC, then pipes into marked
 // 4) marked converts MD to HTML, then pipes into inject (part 1)
 // 5) inject (part 1) injects code into top of HTML document at corresponding tag, then pipes into inject (part 2)
-// 6) inject (part 2) injects code into bottom of HTML document at corresponding tag, then pipes into prettify
+// 6) inject (part 2) injects code into bottom of HTML document at corresponding tag, then pipes into dom
+// 7) dom manipulates several HTML DOM elements (see below for comments), then pipes into prettify
 // 7) prettify adds automatic indentation to HTML document, then pipes into destination
 // 8) destination is public/*.html, contains compiled HTML files
 gulp.task("documentastic", () => {
@@ -46,6 +50,22 @@ gulp.task("documentastic", () => {
 			transform: (filePath, file) => {
 				return file.contents.toString("utf8")
 			}
+		}))
+		.pipe(dom(function() {
+			let docTitle = this.querySelector("h1").innerHTML; // store docTitle by getting contents of <h1>
+			this.querySelector("head title").innerHTML = docTitle; // use docTitle to update contents of <title>
+
+			// below code adapted from Vikas R. Srivastava at technotraps.com
+			// http://www.technotraps.com/open-external-links-new-tab/
+
+			// find all external links (href starts with http:// or https://)
+			let extLinks = this.querySelectorAll("a[href^='http://'], a[href^='https://']");
+			// add target="_blank" attribute to each item
+			for (let y = 0; y < extLinks.length; y++) {
+				extLinks[y].setAttribute("target", "_blank");
+			}
+
+			return this;
 		}))
 		.pipe(prettify({
 			indent_with_tabs: true,
