@@ -41,6 +41,7 @@ Documentation is an invaluable tool in development (and, as I have found, also i
 
 ## Features
 
+* **Lightweight**: All features are written in vanilla JavaScript and run server-side via the Gulp task. The only JavaScript that runs client-side is jquery-smooth-scroll.
 * **Efficient**: Only the documentation files that have been modified are run through the task. Courtesy of [gulp-changed][gulp-changed].
 * **Table of Contents**: Manually trying to maintain TOCs is a headache. This is why Documentastic uses [gulp-doctoc][gulp-doctoc] to automatically generate a dynamic TOC for you based on the structure of your document's headings.
 * **Easy to Read, Easy to Write**: Reading and writing in Markdown couldn't be simpler... as long as you're at a computer. If you're on a mobile device, why should you download yet _another_ app just to read Markdown files? Documentastic uses [gulp-marked][gulp-marked] to take your Markdown files and create platform-agnostic HTML documents from them so that they can be read in any browser.
