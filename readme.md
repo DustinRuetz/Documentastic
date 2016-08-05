@@ -47,13 +47,12 @@ Documentation is an invaluable tool in development (and, as I have found, also i
 * **Function or Form - Why Not Both?**: For best browser compatibility and to avoid nasty surprises, HTML documents should be well-formed and comply with the W3C specification.
 	* Documentastic keeps your working Markdown file clean _and_ your published HTML document compliant by using [gulp-inject][gulp-inject] to inject HTML code partials containing the required `<doctype>`, `<html>`, `<head>`, and `<body>` elements.
 	* If you want to review the published HTML document's code directly, [gulp-prettify][gulp-prettify] has got you covered with proper line breaks and indentation.
-* **Platform-Agnostic**: Free ~~yourself~~ your documentation from the chains of platform dependency and vendor lock-in. As long as you have a browser, you can read your documents.
+* **DOM Manipulation**: Documentastic uses [gulp-dom][gulp-dom] to automatically add a `title` to all documents and a `target="_blank"` attribute to all external links.
+* **Platform-Agnostic**: Free yourself from the chains of platform dependency and vendor lock-in. As long as you have a browser, you can read your documents.
 * **Responsive**: Documents are responsive and will scale gracefully according to device screen size.
 * **Stylin'**: CSS styling courtesy of the [GitHub Markdown Stylesheet][gh-md-ss].
 * **Printer-Friendly**: Documents are printer-friendly by default.
 * **Smooth Moves**: Smooth-scrolling is added to all internal links (i.e. everything in the document's TOC) courtesy of [jquery-smooth-scroll][jq-ss].
-* The `target="_blank"` attribute is automatically added to all external links.
-* The `title` for all documents is automatically generated from the contents of the `<h1>` element.
 
 ## Licence
 
@@ -74,6 +73,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [gulp-marked]: https://www.npmjs.com/package/gulp-marked
 [gulp-inject]: https://www.npmjs.com/package/gulp-inject
 [gulp-prettify]: https://www.npmjs.com/package/gulp-prettify
+[gulp-dom]: https://www.npmjs.com/package/gulp-dom
 [gh-md-ss]: https://gist.github.com/tuzz/3331384
 [jq-ss]: https://www.npmjs.com/package/jquery-smooth-scroll
 

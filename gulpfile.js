@@ -34,7 +34,9 @@ gulp.task("documentastic", () => {
 		// note: after making a change to one of the injected .html partial files,
 		// comment-out "changed" pipe (below), then run the default "gulp" task
 		// in order to update all of your files at once
-		.pipe(changed("public/", {extension: ".html"}))
+		.pipe(changed("public/", {
+			extension: ".html"
+		}))
 		.pipe(doctoc())
 		.pipe(marked())
 		.pipe(inject(gulp.src(["public/partials/p1-top.html"]), {
