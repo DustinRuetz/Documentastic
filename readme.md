@@ -20,8 +20,8 @@ My personal use-case employs [BitTorrent Sync][bt-sync] to sync the contents of 
 
 ## Installation
 
-Prerequisites:
-1. [Node.js][node-js] and a clone/copy of this repository.
+1. Prerequisite: Have [Node.js][node-js] installed.
+1. Get a clone/copy of this repository.
 1. Open a terminal window at the root of the repository.
 1. Run `npm install` to download all dependencies.
 
