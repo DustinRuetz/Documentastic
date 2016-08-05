@@ -20,9 +20,10 @@ My personal use-case employs [BitTorrent Sync][bt-sync] to sync the contents of 
 
 ## Installation
 
-```
-npm install
-```
+Prerequisites:
+1. [Node.js][node-js] and a clone/copy of this repository.
+1. Open a terminal window at the root of the repository.
+1. Run `npm install` to download all dependencies.
 
 ## Usage
 
@@ -68,6 +69,8 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [bt-sync]: https://getsync.com/
+
+[node-js]: https://nodejs.org/en/
 
 [gulp-changed]: https://www.npmjs.com/package/gulp-changed
 [gulp-doctoc]: https://www.npmjs.com/package/gulp-doctoc
