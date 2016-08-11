@@ -60,8 +60,8 @@ gulp.task("documentastic", () => {
 			// find all external links (href starts with http:// or https://)
 			let extLinks = this.querySelectorAll("a[href^='http://'], a[href^='https://']");
 			// add target="_blank" attribute to each item
-			for (let y = 0; y < extLinks.length; y++) {
-				extLinks[y].setAttribute("target", "_blank");
+			for (let x = 0; x < extLinks.length; x++) {
+				extLinks[x].setAttribute("target", "_blank");
 			}
 
 			return this;
