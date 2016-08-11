@@ -20,15 +20,15 @@ gulp.task("default", [
 });
 
 // documentastic task
-// 1) source is dev/*.md, contains MD files that are piped into changed
-// 2) changed monitors public/*.html, only files that have been modified are piped into doctoc
-// 3) doctoc generates TOC, then pipes into marked
-// 4) marked converts MD to HTML, then pipes into inject (part 1)
-// 5) inject (part 1) injects code into top of HTML document at corresponding tag, then pipes into inject (part 2)
-// 6) inject (part 2) injects code into bottom of HTML document at corresponding tag, then pipes into dom
-// 7) dom manipulates several HTML DOM elements (see below comments for details), then pipes into prettify
-// 7) prettify adds automatic indentation to HTML document, then pipes into destination
-// 8) destination is public/*.html, contains compiled HTML files
+// 1) source: MD files from dev/ pipe into...
+// 2) changed: monitors HTML files from public/ and only the modified files are piped into...
+// 3) doctoc: generates TOC, then pipes into...
+// 4) marked: converts MD to HTML, then pipes into...
+// 5) inject (1 of 2): injects code into top of HTML document at corresponding tag, then pipes into...
+// 6) inject (2 of 2): injects code into bottom of HTML document at corresponding tag, then pipes into...
+// 7) dom: manipulates several HTML DOM elements (see below comments for details), then pipes into...
+// 7) prettify: adds automatic indentation to HTML document, then pipes into...
+// 8) destination: public/ which contains compiled HTML files
 gulp.task("documentastic", () => {
 	return gulp.src("dev/*.md")
 		// note: after making a change to one of the injected .html partial files,
@@ -75,9 +75,9 @@ gulp.task("documentastic", () => {
 });
 
 // readmeTOC task
-// 1) source is readme.md, file is piped into doctoc
-// 2) doctoc generates TOC, then pipes into destination
-// 3) destination is same as source (readme.md contents are automatically overwritten/updated)
+// 1) source: readme.md file pipes into...
+// 2) doctoc: generates TOC, then pipes into...
+// 3) destination: same as source (readme.md contents are automatically overwritten/updated)
 gulp.task("readmeTOC", () => {
 	return gulp.src("readme.md")
 		.pipe(doctoc())
