@@ -2,12 +2,12 @@
 
 // required modules
 const gulp = require("gulp"),
-		changed = require("gulp-changed"),
-		doctoc = require("gulp-doctoc"),
-		marked = require("gulp-marked"),
-		inject = require("gulp-inject"),
-		dom = require("gulp-dom"),
-		prettify = require("gulp-prettify");
+		changed = require("gulp-changed"), // build tool - only process modified files
+		doctoc = require("gulp-doctoc"), // markup - automatic TOC generation
+		marked = require("gulp-marked"), // markup - MD to HTML converter
+		inject = require("gulp-inject"), // markup - injection of code partials
+		dom = require("gulp-dom"), // build tool - run DOM operations on inbound HTML
+		prettify = require("gulp-prettify"); // markup - proper indentation and line breaks for HTML
 
 // default tasks to run on "gulp" command
 gulp.task("default", [
@@ -26,7 +26,7 @@ gulp.task("default", [
 // 4) marked converts MD to HTML, then pipes into inject (part 1)
 // 5) inject (part 1) injects code into top of HTML document at corresponding tag, then pipes into inject (part 2)
 // 6) inject (part 2) injects code into bottom of HTML document at corresponding tag, then pipes into dom
-// 7) dom manipulates several HTML DOM elements (see below for comments), then pipes into prettify
+// 7) dom manipulates several HTML DOM elements (see below comments for details), then pipes into prettify
 // 7) prettify adds automatic indentation to HTML document, then pipes into destination
 // 8) destination is public/*.html, contains compiled HTML files
 gulp.task("documentastic", () => {
@@ -56,9 +56,6 @@ gulp.task("documentastic", () => {
 		.pipe(dom(function() {
 			let docTitle = this.querySelector("h1").innerHTML; // store docTitle by getting contents of <h1>
 			this.querySelector("head title").innerHTML = docTitle; // use docTitle to update contents of <title>
-
-			// below code adapted from Vikas R. Srivastava at technotraps.com
-			// http://www.technotraps.com/open-external-links-new-tab/
 
 			// find all external links (href starts with http:// or https://)
 			let extLinks = this.querySelectorAll("a[href^='http://'], a[href^='https://']");
