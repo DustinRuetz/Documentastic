@@ -1,6 +1,6 @@
 # Documentastic
 
-A Markdown-to-HTML documentation generator that is feature-rich, flexible, lightweight, and platform-agnostic.
+A Markdown-to-HTML documentation generator that is feature-rich, customizable, lightweight, and platform-agnostic.
 
 This tool was developed with the intention of being used locally, i.e. `dev/*.md` files compile to `public/*.html` files, the latter of which can be viewed locally in any browser regardless of device. An example of the output can be found by viewing my notes on Markdown syntax in `public/dev_markdown.html`.
 
@@ -21,7 +21,7 @@ My personal use-case employs [BitTorrent Sync][bt-sync] to sync the contents of 
 ## Installation
 
 1. Prerequisite: Have [Node.js][node-js] installed.
-1. Get a clone/copy of this repository.
+1. Download a clone/copy of this repository.
 1. Open a terminal window at the root of the repository.
 1. Run `npm install` to download all dependencies.
 
