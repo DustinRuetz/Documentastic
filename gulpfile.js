@@ -10,14 +10,17 @@ const gulp = require("gulp"),
 		prettify = require("gulp-prettify"); // markup - proper indentation and line breaks for HTML
 
 // default tasks to run on "gulp" command
-gulp.task("default", [
+gulp.task("default",
+	[
 		"documentastic",
 		"readmeTOC"
-	], () => {
+	],
+	() => {
 		// files to watch and tasks to run
 		gulp.watch("dev/*.md", ["documentastic"]);
 		gulp.watch("readme.md", ["readmeTOC"]);
-});
+	}
+);
 
 // documentastic task
 // 1) source: MD files from dev/ pipe into...
