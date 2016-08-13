@@ -60,8 +60,8 @@ gulp.task("documentastic", () => {
 			let docTitle = this.querySelector("h1").innerHTML; // store docTitle by getting contents of <h1>
 			this.querySelector("head title").innerHTML = docTitle; // use docTitle to update contents of <title>
 
-			// find all external links (href starts with http:// or https://)
-			let extLinks = this.querySelectorAll("a[href^='http://'], a[href^='https://']");
+			// find all external links (href attribute does not begin with a hashtag)
+			let extLinks = this.querySelectorAll("a:not([href^='#'])");
 			// add target="_blank" attribute to each item
 			for (let x = 0; x < extLinks.length; x++) {
 				extLinks[x].setAttribute("target", "_blank");
