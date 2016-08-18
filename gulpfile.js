@@ -63,8 +63,8 @@ gulp.task("documentastic", () => {
 			// find all external links (href attribute does not begin with a hashtag)
 			let extLinks = this.querySelectorAll("a:not([href^='#'])");
 			// add target="_blank" attribute to each item
-			for (let x = 0; x < extLinks.length; x++) {
-				extLinks[x].setAttribute("target", "_blank");
+			for (let i = 0; i < extLinks.length; i++) {
+				extLinks[i].setAttribute("target", "_blank");
 			}
 
 			return this;
