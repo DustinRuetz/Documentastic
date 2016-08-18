@@ -1,12 +1,4 @@
 node_modules
 .DS_Store
-.sync
-*.md
-!readme.md
-!template.md
-!dev_markdown.md
-*.html
-!template.html
-!dev_markdown.html
-!p1-top.html
-!p2-bottom.html
+*.lnk
+*.map
