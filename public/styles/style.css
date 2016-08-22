@@ -3,7 +3,7 @@
 /* Downloaded on 2016-Jul-28 */
 /* Search "comment" to find modifications */
 
-/* comment: customized <body> styles */
+/* comment: customized <body> style */
 body {
 	max-width: 500px;
 	margin: 0 auto;
@@ -123,7 +123,7 @@ p, blockquote, ol, dl, table, pre {
 	margin: 15px 0;
 }
 
-/* comment: customized <hr> styles */
+/* comment: customized <hr> style */
 hr {
 	/*background: transparent url("http://tinyurl.com/bq5kskr") repeat-x 0 0;*/
 	/*border: 0 none;*/
