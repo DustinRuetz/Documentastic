@@ -403,7 +403,6 @@ pre code, pre tt {
 /* comment: added media query */
 @media screen and (max-width: 800px) {
 	body {
-		/*max-width: 100%;*/
 		padding: 10px;
 	}
 }
