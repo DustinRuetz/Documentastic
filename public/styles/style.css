@@ -123,12 +123,14 @@ p, blockquote, ol, dl, table, pre {
 	margin: 15px 0;
 }
 
+/* comment: customized <hr> styles */
 hr {
-	background: transparent url("http://tinyurl.com/bq5kskr") repeat-x 0 0;
-	border: 0 none;
-	color: #cccccc;
-	height: 4px;
-	padding: 0;
+	/*background: transparent url("http://tinyurl.com/bq5kskr") repeat-x 0 0;*/
+	/*border: 0 none;*/
+	/*color: #cccccc;*/
+	/*height: 4px;*/
+	/*padding: 0;*/
+	margin: 50px 0; /* comment: added margin */
 }
 
 body > h2:first-child {
