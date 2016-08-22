@@ -1,5 +1,5 @@
 {
-	"name": "markdown-to-html",
+	"name": "Documentastic",
 	"version": "1.0.0",
 	"description": "Markdown-to-HTML documentation generator featuring a plethora of added bells and whistles.",
 	"main": "index.js",
