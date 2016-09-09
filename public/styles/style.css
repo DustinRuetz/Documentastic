@@ -1,23 +1,20 @@
 /* GitHub Markdown Stylesheet */
 /* https://gist.github.com/tuzz/3331384 */
 /* Downloaded on 2016-Jul-28 */
-/* Search "comment" to find modifications */
-
-/* comment: customized <body> style */
-body {
-	max-width: 500px;
-	margin: 0 auto;
-}
+/* Search "mod" to find modifications */
 
 body {
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 14px; 
+	font-size: 16px; /* mod: adjusted font-size */
 	line-height: 1.6;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	background-color: white;
 	padding: 30px;
 	color: #333;
+	max-width: 500px; /* mod: added max-width */
+	margin: 0 auto; /* mod: added margin */
 }
 
 body > *:first-child {
@@ -92,45 +89,54 @@ h6 tt, h6 code {
 
 h1 {
 	font-size: 28px;
+	font-size: 36px; /* mod: adjusted font-size */
 	color: black;
 }
 
 h2 {
 	font-size: 24px;
+	font-size: 30px; /* mod: adjusted font-size */
 	border-bottom: 1px solid #cccccc;
+	border-bottom: 3px solid #cccccc; /* mod: adjusted border-bottom */
 	color: black;
 }
 
 h3 {
+	display: inline-block; /* mod: changed display */
+	border-bottom: 2px solid #ccc; /* mod: added border-bottom */
 	font-size: 18px;
+	font-size: 26px; /* mod: adjusted font-size */
 }
 
 h4 {
 	font-size: 16px;
+	font-size: 22px; /* mod: adjusted font-size */
 }
 
 h5 {
 	font-size: 14px;
+	font-size: 18px; /* mod: adjusted font-size */
 }
 
 h6 {
 	color: #777777;
 	font-size: 14px;
+	font-size: 18px; /* mod: adjusted font-size */
 }
 
-/* comment: removed <ul> and <li> elements */
+/* mod: removed <ul> and <li> elements */
 p, blockquote, ol, dl, table, pre {
 	margin: 15px 0;
 }
 
-/* comment: customized <hr> style */
+/* mod: customized <hr> style */
 hr {
 	/*background: transparent url("http://tinyurl.com/bq5kskr") repeat-x 0 0;*/
 	/*border: 0 none;*/
 	/*color: #cccccc;*/
 	/*height: 4px;*/
 	/*padding: 0;*/
-	margin: 50px 0; /* comment: added margin */
+	margin: 50px 0; /* mod: added margin */
 }
 
 body > h2:first-child {
@@ -184,6 +190,7 @@ dl {
 
 dl dt {
 	font-size: 14px;
+	font-size: 16px; /* mod: adjusted font-size */
 	font-weight: bold;
 	font-style: italic;
 	padding: 0;
@@ -379,6 +386,7 @@ pre code {
 	background-color: #f8f8f8;
 	border: 1px solid #cccccc;
 	font-size: 13px;
+	font-size: 15px; /* mod: adjusted font-size */
 	line-height: 19px;
 	overflow: auto;
 	padding: 6px 10px;
@@ -389,6 +397,7 @@ pre {
 	background-color: #f8f8f8;
 	border: 1px solid #cccccc;
 	font-size: 13px;
+	font-size: 15px; /* mod: adjusted font-size */
 	line-height: 19px;
 	overflow: auto;
 	padding: 6px 10px;
@@ -400,7 +409,7 @@ pre code, pre tt {
 	border: none;
 }
 
-/* comment: added media query */
+/* mod: added media query */
 @media screen and (max-width: 800px) {
 	body {
 		padding: 10px;
