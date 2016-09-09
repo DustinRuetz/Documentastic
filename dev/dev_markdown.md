@@ -10,25 +10,26 @@ Notes on using Markdown.
 
 ## Resources
 
-- [Mastering Markdown][mastering-markdown] video series by Wes Bos.
+* [Mastering Markdown][mastering-markdown] video series by Wes Bos.
 
 ## Syntax
 
-- Markdown uses its own syntax that allows users to write simplified HTML.
-- Markdown files, when opened in a Markdown viewer, are compiled into valid HTML.
+* Markdown uses its own syntax that allows users to write simplified HTML.
+* Markdown files, when opened in a Markdown viewer, are compiled into valid HTML.
 
 ### Headings
 
 Use one hashtag for an `<h1>`, followed by the heading text.
 
-	# This renders as an <h1> heading.
+	# This will render as an <h1> heading.
 
-Use two hashtags for an `<h2>`, followed by the heading text, three hashtags for an `<h3>`, etc.
+* Use two hashtags for an `<h2>`, followed by the heading text.
+* Use three hashtags for an `<h3>`, followed by the heading text, etc.
 
 ### Paragraphs
 
-- Simply type the text - no special characters needed.
-- Paragraphs must be separated by one blank line, otherwise they will be rendered on the same line.
+* Simply type the paragraph text - no special characters needed.
+* Paragraphs must be separated by one blank line, otherwise they will be rendered on the same line.
 
 		This is the first paragraph.
 	
@@ -38,8 +39,8 @@ Use two hashtags for an `<h2>`, followed by the heading text, three hashtags for
 
 #### Bold
 
-- Text wrapped with two asterisks on either side (\*\*example\*\*) will be bolded.
-- Alternatively, text wrapped with two underscores on either side (\_\_example\_\_) will also be bolded.
+* Text wrapped with two asterisks on either side will be bolded.
+* Alternatively, text wrapped with two underscores on either side will also be bolded.
 
 		This will render **bold** text.
 	
@@ -47,8 +48,8 @@ Use two hashtags for an `<h2>`, followed by the heading text, three hashtags for
 
 #### Italic
 
-- Text wrapped with underscores on either side (\_example\_) will be italicized.
-- Alternatively, text wrapped with asterisks on either side (\*example\*) will also be italicized.
+* Text wrapped with underscores on either side will be italicized.
+* Alternatively, text wrapped with asterisks on either side will also be italicized.
 
 		This will render _italicized_ text.
 	
@@ -56,7 +57,7 @@ Use two hashtags for an `<h2>`, followed by the heading text, three hashtags for
 
 #### Strikethrough
 
-- Text placed between two tildes on either side (\~\~example\~\~) will render as strikethrough text.
+* Text wrapped with two tildes on either side will render as strikethrough text.
 
 		This will render as ~~strikethrough~~ text.
 
@@ -64,146 +65,186 @@ Use two hashtags for an `<h2>`, followed by the heading text, three hashtags for
 
 There are four ways to use links in Markdown.
 
-- Wrap the URL with angle brackets (<>).
+* Wrap the URL with angle brackets.
+	```
+	<https://github.com>
+	```
 
-		<https://github.com>
 
-- Wrap the link text in square brackets [] and the URL in parentheses ().
+* Wrap the link text in square brackets and the URL in parentheses.
+	```
+	Go to [GitHub.com](https://github.com) to learn more.
+	```
 
-		Go to [GitHub.com](https://github.com) to learn more.
 
-- To include a title/tooltip that will display when the user hovers over the link, use the above example's syntax and add the title in quotes.
+* To include a title/tooltip that will display when the user hovers over the link, use the above example's syntax and add the title in quotes.
+	```
+	Go to [GitHub.com](https://github.com "Click to go the GitHub homepage") to learn more.
+	```
 
-		Go to [GitHub.com](https://github.com "Click to go the GitHub homepage") to learn more.
 
-- To keep the text as readable as possible, use the "link/reference" method: place the link inline and reference its URL at the bottom of the document (without the backslash \ character).
+* To keep the text as readable as possible, use the "link/reference" method: place the link inline and reference its path/URL at the bottom of the document.
+* **Note:** The leading backslash on the last line is not required (it is included here to resolve a formatting issue).
+	```
+	Visit the world's [first website][first-website], created by Tim Berners-Lee.
 
-		Visit the [first website][first-website], created by Tim Berners-Lee.
-		...
-		(rest of document)
-		...
-		\[first-website]: http://info.cern.ch/hypertext/WWW/TheProject.html
+	...
+
+	(rest of document)
+
+	...
+
+	\[first-website]: http://info.cern.ch/hypertext/WWW/TheProject.html
+	```
 
 ### Images
 
-Images are indicated with an exclamation mark (!), alternate text is placed in square brackets [], the filepath/URL is placed in parentheses (), and finally a title/tooltip can be included in quotes ("").
+Images are indicated with an exclamation mark, alternate text is placed in square brackets, the path/URL is placed in parentheses, and finally a title/tooltip can be included in quotes.
 
-		![Alternate text for the image](path/to/image.png "Title text for the image")
+	![Alternate text for the image](path/to/image.png "Title text for the image")
 
 Alternatively, images can be used in a similar way to the "link/reference" method.
 
-		## Gallery
-		![Alternate text for the image][image-1]
-		...
-		(rest of document)
-		...
-		\[image-1]: http://github.com/logo/png
+```
+## Gallery
+
+![Alternate text for the image][img-1]
+
+...
+
+(rest of document)
+
+...
+
+[img-1]: http://github.com/images/logo.png
+```
 
 ### Lists
 
 #### Unordered Lists
 
-Unordered lists can use the minus, plus, and asterisk characters - all will be rendered as bullet points.
+Unordered lists are produced by using the asterisk, hyphen, or plus sign characters. All will be rendered as bullet points.
 
-		- Item 1
-		- Item 2
-		- Item 3
+	Asterisk bullet points
+	* Item 1
+	* Item 2
+	* Item 3
 
-		+ Item 1
-		+ Item 2
-		+ Item 3
+	Hyphen bullet points
+	- Item 1
+	- Item 2
+	- Item 3
 
-		* Item 1
-		* Item 2
-		* Item 3
+	Plus Sign bullet points
+	+ Item 1
+	+ Item 2
+	+ Item 3
 
 #### Ordered Lists
 
-Each ordered list item should be preceded by `1.` - the list items will be numbered correctly when compiled.
+Each ordered list item should be preceded by `1.` (the list items will be numbered correctly when compiled).
+
+For example, this input:
 
 	1. Number One
 	1. Number Two
 	1. Number Three
 
+Will produce this output:
+
+1. Number One
+1. Number Two
+1. Number Three
+
 #### Nested Lists
 
-Add subitems to list items using tab indentation.
+Add sub-items to list items using tab indentation.
 
 	1. Go to the store.
-		- Buy milk.
-		- Buy bread.
+		* Buy milk.
+		* Buy bread.
 	1. Come home.
 
 #### Advanced Nesting
 
-Add additional elements (paragraphs, images, links, etc.) using line breaks and tab indentation.
+Additional elements (paragraphs, images, links, etc.) can be included in list items by using line breaks and tab indentation.
 
-	1. Create a new HTML file.
-		- Include the following content:
+```
+1. Create a new HTML file.
+	* Include the following content:
 
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aut sit ipsum deleniti obcaecati quae. Voluptates aliquam autem illo ipsum quae blanditiis, quisquam fuga ullam!
+		Lorem ipsum dolor sit amet.
 
-			![Alternate text for the image](path/to/image.png)
+		![Alternate text for the image](path/to/image.png)
 
-			[Link to full image](http://example.com/image.png)
+		[Link to full image](http://example.com/image.png)
 
-	1. Create a new CSS file.
+	* Save and close the file.
+
+1. Create a new CSS file.
+```
 
 ### Horizontal Rule
 
-- To create a horizontal rule use three hyphens (-).
-- Make sure that there are blank line breaks above and beneath, otherwise it will inadvertently render a heading.
+* To create a horizontal rule use three hyphens.
+* Ensure that there are blank line breaks above and beneath, otherwise Markdown will render a heading.
 
-		## First section
+	```
+	## First section
 
-		---
+	---
 
-		## Second section
+	## Second section
 
-		---
+	---
 
-		## Third section
+	## Third section
+	```
 
 ### Blockquotes
 
-- Create a single-line blockquote using the right-pointing chevron (>).
+* Create a single-line blockquote using the right-pointing chevron (>).
+	```
+	> A single-line blockquote. ~~ William Shakespeare
+	```
 
-		> A single-line blockquote. ~~ William Shakespeare
-
-- Create a multi-line blockquote by starting each line with the chevron.
-
-		> A multi-line blockquote.
-		> 
-		> ~~ Socrates
+* Create a multi-line blockquote by starting each line with the chevron.
+	```
+	> A multi-line blockquote.
+	> 
+	> ~~ Socrates
+	```
 
 ### Code Blocks and Syntax Highlighting
 
 There are three ways to indicate code, and a `diff` feature for highlighting code changes.
 
-- Indent the code block.
+* Indent the code block.
+	```
+	var a = 1;
+	var b = a + 1;
+	```
 
-		var a = 1;
-		var b = a + 1;
-
-- Begin the code block with three backticks (`) and the name of the language, write the lines of code, and then end with three more backticks.
-- **Note**: the name of the language is not required.
-
+* Begin the code block with three backticks and the name of the language, write the lines of code, and then end with three more backticks.
+* **Note**: The name of the language is not required.
 		```js
 		var age = 25;
 		var name = "Past Dustin";
 		```
 
-- If writing inline code, wrap it in backticks (`).
+* If writing inline code, wrap it in backticks.
+	```
+	This `<p>` will be formatted as code.
+	```
 
-		This `<p>` will be rendered as code.
-
-- The `diff` feature is used to visually indicate changes (lines beginning with minus (-) will be rendered as red deletions, while lines beginning with plus (+) will be rendered as green additions.
-
-		```diff
-		var x = 100;
-		- var y = 200;
-		+ var y = 300;
-		```
+* The `diff` feature is used to visually indicate changes.
+	* Lines beginning with a minus sign (-) will be rendered as red deletions.
+	* Lines beginning with a plus sign (+) will be rendered as green additions.
+			```diff
+			var x = 100;
+			* var y = 200;
+			- var y = 300;
+			```
 
 ### Non-standard Features
 
@@ -211,9 +252,9 @@ Both tables and checkboxes are not included in the official Markdown specificati
 
 #### Tables
 
-- Columns are indicated by using the pipe character (|).
-- Rows are indicated by each line wrapped in pipe characters.
-- The second line of the table controls the column's text alignment.
+* Columns are indicated by using the pipe character (|).
+* Rows are indicated by each line wrapped in pipe characters.
+* The second line of the table controls the column's text alignment.
 
 		| Column 1 Heading | Column 2 Heading | Column 3 Heading |
 		|:-----------------|:----------------:|-----------------:|
@@ -221,12 +262,12 @@ Both tables and checkboxes are not included in the official Markdown specificati
 
 #### Checkboxes
 
-- Checkboxes are added by using a list item along with a set of square brackets containing a space [ ].
-- To check off a list item, place an "x" inside of the square brackets.
+* Checkboxes are added by using a list item along with a set of square brackets containing a space.
+* To check off a list item, place an "x" inside of the square brackets.
 
-		- [ ] Task 1
-		- [x] Task 2
-		- [ ] Task 3
+		* [ ] Task 1
+		* [x] Task 2
+		* [ ] Task 3
 
 [mastering-markdown]: http://masteringmarkdown.com
 

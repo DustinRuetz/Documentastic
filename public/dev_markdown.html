@@ -61,12 +61,15 @@
 		</ul>
 		<h3 id="headings">Headings</h3>
 		<p>Use one hashtag for an <code>&lt;h1&gt;</code>, followed by the heading text.</p>
-		<pre><code># This renders as an &lt;h1&gt; heading.
+		<pre><code># This will render as an &lt;h1&gt; heading.
 </code></pre>
-		<p>Use two hashtags for an <code>&lt;h2&gt;</code>, followed by the heading text, three hashtags for an <code>&lt;h3&gt;</code>, etc.</p>
+		<ul>
+			<li>Use two hashtags for an <code>&lt;h2&gt;</code>, followed by the heading text.</li>
+			<li>Use three hashtags for an <code>&lt;h3&gt;</code>, followed by the heading text, etc.</li>
+		</ul>
 		<h3 id="paragraphs">Paragraphs</h3>
 		<ul>
-			<li>Simply type the text - no special characters needed.</li>
+			<li>Simply type the paragraph text - no special characters needed.</li>
 			<li>
 				<p>Paragraphs must be separated by one blank line, otherwise they will be rendered on the same line.</p>
 				<pre><code>  This is the first paragraph.
@@ -77,9 +80,9 @@
 		<h3 id="styling-text">Styling Text</h3>
 		<h4 id="bold">Bold</h4>
 		<ul>
-			<li>Text wrapped with two asterisks on either side (**example**) will be bolded.</li>
+			<li>Text wrapped with two asterisks on either side will be bolded.</li>
 			<li>
-				<p>Alternatively, text wrapped with two underscores on either side (__example__) will also be bolded.</p>
+				<p>Alternatively, text wrapped with two underscores on either side will also be bolded.</p>
 				<pre><code>  This will render **bold** text.
 
   This will also render __bold__ text.
@@ -87,9 +90,9 @@
 		</ul>
 		<h4 id="italic">Italic</h4>
 		<ul>
-			<li>Text wrapped with underscores on either side (_example_) will be italicized.</li>
+			<li>Text wrapped with underscores on either side will be italicized.</li>
 			<li>
-				<p>Alternatively, text wrapped with asterisks on either side (*example*) will also be italicized.</p>
+				<p>Alternatively, text wrapped with asterisks on either side will also be italicized.</p>
 				<pre><code>  This will render _italicized_ text.
 
   This will also render *italicized* text.
@@ -98,92 +101,114 @@
 		<h4 id="strikethrough">Strikethrough</h4>
 		<ul>
 			<li>
-				<p>Text placed between two tildes on either side (~~example~~) will render as strikethrough text.</p>
+				<p>Text wrapped with two tildes on either side will render as strikethrough text.</p>
 				<pre><code>  This will render as ~~strikethrough~~ text.
 </code></pre></li>
 		</ul>
 		<h3 id="links">Links</h3>
 		<p>There are four ways to use links in Markdown.</p>
 		<ul>
-			<li>
-				<p>Wrap the URL with angle brackets (&lt;&gt;).</p>
-				<pre><code>  &lt;https://github.com&gt;
+			<li>Wrap the URL with angle brackets.<pre><code>  &lt;https://github.com&gt;
 </code></pre></li>
-			<li>
-				<p>Wrap the link text in square brackets [] and the URL in parentheses ().</p>
-				<pre><code>  Go to [GitHub.com](https://github.com) to learn more.
+		</ul>
+		<ul>
+			<li>Wrap the link text in square brackets and the URL in parentheses.<pre><code>  Go to [GitHub.com](https://github.com) to learn more.
 </code></pre></li>
-			<li>
-				<p>To include a title/tooltip that will display when the user hovers over the link, use the above example's syntax and add the title in quotes.</p>
-				<pre><code>  Go to [GitHub.com](https://github.com "Click to go the GitHub homepage") to learn more.
+		</ul>
+		<ul>
+			<li>To include a title/tooltip that will display when the user hovers over the link, use the above example's syntax and add the title in quotes.<pre><code>  Go to [GitHub.com](https://github.com "Click to go the GitHub homepage") to learn more.
 </code></pre></li>
+		</ul>
+		<ul>
+			<li>To keep the text as readable as possible, use the "link/reference" method: place the link inline and reference its path/URL at the bottom of the document.</li>
 			<li>
-				<p>To keep the text as readable as possible, use the "link/reference" method: place the link inline and reference its URL at the bottom of the document (without the backslash \ character).</p>
-				<pre><code>  Visit the [first website][first-website], created by Tim Berners-Lee.
+				<p><strong>Note:</strong> The leading backslash on the last line is not required (it is included here to resolve a formatting issue).</p>
+				<pre><code>  Visit the world's [first website][first-website], created by Tim Berners-Lee.
+
   ...
+
   (rest of document)
+
   ...
+
   \[first-website]: http://info.cern.ch/hypertext/WWW/TheProject.html
 </code></pre></li>
 		</ul>
 		<h3 id="images">Images</h3>
-		<p>Images are indicated with an exclamation mark (!), alternate text is placed in square brackets [], the filepath/URL is placed in parentheses (), and finally a title/tooltip can be included in quotes ("").</p>
-		<pre><code>    ![Alternate text for the image](path/to/image.png "Title text for the image")
+		<p>Images are indicated with an exclamation mark, alternate text is placed in square brackets, the path/URL is placed in parentheses, and finally a title/tooltip can be included in quotes.</p>
+		<pre><code>![Alternate text for the image](path/to/image.png "Title text for the image")
 </code></pre>
 		<p>Alternatively, images can be used in a similar way to the "link/reference" method.</p>
-		<pre><code>    ## Gallery
-    ![Alternate text for the image][image-1]
-    ...
-    (rest of document)
-    ...
-    \[image-1]: http://github.com/logo/png
+		<pre><code>## Gallery
+
+![Alternate text for the image][img-1]
+
+...
+
+(rest of document)
+
+...
+
+[img-1]: http://github.com/images/logo.png
 </code></pre>
 		<h3 id="lists">Lists</h3>
 		<h4 id="unordered-lists">Unordered Lists</h4>
-		<p>Unordered lists can use the minus, plus, and asterisk characters - all will be rendered as bullet points.</p>
-		<pre><code>    - Item 1
-    - Item 2
-    - Item 3
+		<p>Unordered lists are produced by using the asterisk, hyphen, or plus sign characters. All will be rendered as bullet points.</p>
+		<pre><code>Asterisk bullet points
+* Item 1
+* Item 2
+* Item 3
 
-    + Item 1
-    + Item 2
-    + Item 3
+Hyphen bullet points
+- Item 1
+- Item 2
+- Item 3
 
-    * Item 1
-    * Item 2
-    * Item 3
+Plus Sign bullet points
++ Item 1
++ Item 2
++ Item 3
 </code></pre>
 		<h4 id="ordered-lists">Ordered Lists</h4>
-		<p>Each ordered list item should be preceded by <code>1.</code> - the list items will be numbered correctly when compiled.</p>
+		<p>Each ordered list item should be preceded by <code>1.</code> (the list items will be numbered correctly when compiled).</p>
+		<p>For example, this input:</p>
 		<pre><code>1. Number One
 1. Number Two
 1. Number Three
 </code></pre>
+		<p>Will produce this output:</p>
+		<ol>
+			<li>Number One</li>
+			<li>Number Two</li>
+			<li>Number Three</li>
+		</ol>
 		<h4 id="nested-lists">Nested Lists</h4>
-		<p>Add subitems to list items using tab indentation.</p>
+		<p>Add sub-items to list items using tab indentation.</p>
 		<pre><code>1. Go to the store.
-    - Buy milk.
-    - Buy bread.
+    * Buy milk.
+    * Buy bread.
 1. Come home.
 </code></pre>
 		<h4 id="advanced-nesting">Advanced Nesting</h4>
-		<p>Add additional elements (paragraphs, images, links, etc.) using line breaks and tab indentation.</p>
+		<p>Additional elements (paragraphs, images, links, etc.) can be included in list items by using line breaks and tab indentation.</p>
 		<pre><code>1. Create a new HTML file.
-    - Include the following content:
+    * Include the following content:
 
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aut sit ipsum deleniti obcaecati quae. Voluptates aliquam autem illo ipsum quae blanditiis, quisquam fuga ullam!
+        Lorem ipsum dolor sit amet.
 
         ![Alternate text for the image](path/to/image.png)
 
         [Link to full image](http://example.com/image.png)
 
+    * Save and close the file.
+
 1. Create a new CSS file.
 </code></pre>
 		<h3 id="horizontal-rule">Horizontal Rule</h3>
 		<ul>
-			<li>To create a horizontal rule use three hyphens (-).</li>
+			<li>To create a horizontal rule use three hyphens.</li>
 			<li>
-				<p>Make sure that there are blank line breaks above and beneath, otherwise it will inadvertently render a heading.</p>
+				<p>Ensure that there are blank line breaks above and beneath, otherwise Markdown will render a heading.</p>
 				<pre><code>  ## First section
 
   ---
@@ -217,27 +242,31 @@
   var b = a + 1;
 </code></pre></li>
 			<li>
-				<p>Begin the code block with three backticks (`) and the name of the language, write the lines of code, and then end with three more backticks.</p>
+				<p>Begin the code block with three backticks and the name of the language, write the lines of code, and then end with three more backticks.</p>
 			</li>
 			<li>
-				<p><strong>Note</strong>: the name of the language is not required.</p>
+				<p><strong>Note</strong>: The name of the language is not required.</p>
 				<pre><code>  ```js
   var age = 25;
   var name = "Past Dustin";
   ```
 </code></pre></li>
 			<li>
-				<p>If writing inline code, wrap it in backticks (`).</p>
-				<pre><code>  This `&lt;p&gt;` will be rendered as code.
+				<p>If writing inline code, wrap it in backticks.</p>
+				<pre><code>  This `&lt;p&gt;` will be formatted as code.
 </code></pre></li>
 			<li>
-				<p>The <code>diff</code> feature is used to visually indicate changes (lines beginning with minus (-) will be rendered as red deletions, while lines beginning with plus (+) will be rendered as green additions.</p>
-				<pre><code>  ```diff
+				<p>The <code>diff</code> feature is used to visually indicate changes.</p>
+				<ul>
+					<li>Lines beginning with a minus sign (-) will be rendered as red deletions.</li>
+					<li>Lines beginning with a plus sign (+) will be rendered as green additions.<pre><code>  ```diff
   var x = 100;
-  - var y = 200;
-  + var y = 300;
+  * var y = 200;
+  - var y = 300;
   ```
 </code></pre></li>
+				</ul>
+			</li>
 		</ul>
 		<h3 id="non-standard-features">Non-standard Features</h3>
 		<p>Both tables and checkboxes are not included in the official Markdown specification, however many Markdown readers do support them.</p>
@@ -254,12 +283,12 @@
 		</ul>
 		<h4 id="checkboxes">Checkboxes</h4>
 		<ul>
-			<li>Checkboxes are added by using a list item along with a set of square brackets containing a space [ ].</li>
+			<li>Checkboxes are added by using a list item along with a set of square brackets containing a space.</li>
 			<li>
 				<p>To check off a list item, place an "x" inside of the square brackets.</p>
-				<pre><code>  - [ ] Task 1
-  - [x] Task 2
-  - [ ] Task 3
+				<pre><code>  * [ ] Task 1
+  * [x] Task 2
+  * [ ] Task 3
 </code></pre></li>
 		</ul>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
