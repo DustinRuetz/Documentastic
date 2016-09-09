@@ -57,8 +57,8 @@ gulp.task("documentastic", () => {
 			}
 		}))
 		.pipe(dom(function() {
-			let docTitle = this.querySelector("h1").innerHTML; // store docTitle by getting contents of <h1>
-			this.querySelector("head title").innerHTML = docTitle; // use docTitle to update contents of <title>
+			let docTitle = this.querySelector("h1").textContent; // store docTitle by getting contents of <h1>
+			this.querySelector("head title").textContent = docTitle; // use docTitle to update contents of <title>
 
 			// find all external links (href attribute does not begin with a hashtag)
 			let extLinks = this.querySelectorAll("a:not([href^='#'])");
