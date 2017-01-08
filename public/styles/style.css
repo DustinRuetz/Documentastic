@@ -275,6 +275,8 @@ table tr th :last-child, table tr td :last-child {
 
 img {
 	max-width: 100%;
+	display: block; /* mod: centre images */
+	margin: 0 auto; /* mod: centre images */
 }
 
 span.frame {
