@@ -75,7 +75,8 @@
 				<pre><code>  This is the first paragraph.
 
   This is the second paragraph.
-</code></pre></li>
+</code></pre>
+			</li>
 		</ul>
 		<h3 id="styling-text">Styling Text</h3>
 		<h4 id="bold">Bold</h4>
@@ -86,7 +87,8 @@
 				<pre><code>  This will render **bold** text.
 
   This will also render __bold__ text.
-</code></pre></li>
+</code></pre>
+			</li>
 		</ul>
 		<h4 id="italic">Italic</h4>
 		<ul>
@@ -96,28 +98,36 @@
 				<pre><code>  This will render _italicized_ text.
 
   This will also render *italicized* text.
-</code></pre></li>
+</code></pre>
+			</li>
 		</ul>
 		<h4 id="strikethrough">Strikethrough</h4>
 		<ul>
 			<li>
 				<p>Text wrapped with two tildes on either side will render as strikethrough text.</p>
 				<pre><code>  This will render as ~~strikethrough~~ text.
-</code></pre></li>
+</code></pre>
+			</li>
 		</ul>
 		<h3 id="links">Links</h3>
 		<p>There are four ways to use links in Markdown.</p>
 		<ul>
-			<li>Wrap the URL with angle brackets.<pre><code>  &lt;https://github.com&gt;
-</code></pre></li>
+			<li>Wrap the URL with angle brackets.
+				<pre><code>  &lt;https://github.com&gt;
+</code></pre>
+			</li>
 		</ul>
 		<ul>
-			<li>Wrap the link text in square brackets and the URL in parentheses.<pre><code>  Go to [GitHub.com](https://github.com) to learn more.
-</code></pre></li>
+			<li>Wrap the link text in square brackets and the URL in parentheses.
+				<pre><code>  Go to [GitHub.com](https://github.com) to learn more.
+</code></pre>
+			</li>
 		</ul>
 		<ul>
-			<li>To include a title/tooltip that will display when the user hovers over the link, use the above example's syntax and add the title in quotes.<pre><code>  Go to [GitHub.com](https://github.com "Click to go the GitHub homepage") to learn more.
-</code></pre></li>
+			<li>To include a title/tooltip that will display when the user hovers over the link, use the above example's syntax and add the title in quotes.
+				<pre><code>  Go to [GitHub.com](https://github.com "Click to go the GitHub homepage") to learn more.
+</code></pre>
+			</li>
 		</ul>
 		<ul>
 			<li>To keep the text as readable as possible, use the "link/reference" method: place the link inline and reference its path/URL at the bottom of the document.</li>
@@ -132,7 +142,8 @@
   ...
 
   \[first-website]: http://info.cern.ch/hypertext/WWW/TheProject.html
-</code></pre></li>
+</code></pre>
+			</li>
 		</ul>
 		<h3 id="images">Images</h3>
 		<p>Images are indicated with an exclamation mark, alternate text is placed in square brackets, the path/URL is placed in parentheses, and finally a title/tooltip can be included in quotes.</p>
@@ -218,20 +229,23 @@ Plus Sign bullet points
   ---
 
   ## Third section
-</code></pre></li>
+</code></pre>
+			</li>
 		</ul>
 		<h3 id="blockquotes">Blockquotes</h3>
 		<ul>
 			<li>
 				<p>Create a single-line blockquote using the right-pointing chevron (&gt;).</p>
 				<pre><code>  &gt; A single-line blockquote. ~~ William Shakespeare
-</code></pre></li>
+</code></pre>
+			</li>
 			<li>
 				<p>Create a multi-line blockquote by starting each line with the chevron.</p>
 				<pre><code>  &gt; A multi-line blockquote.
   &gt; 
   &gt; ~~ Socrates
-</code></pre></li>
+</code></pre>
+			</li>
 		</ul>
 		<h3 id="code-blocks-and-syntax-highlighting">Code Blocks and Syntax Highlighting</h3>
 		<p>There are three ways to indicate code, and a <code>diff</code> feature for highlighting code changes.</p>
@@ -240,7 +254,8 @@ Plus Sign bullet points
 				<p>Indent the code block.</p>
 				<pre><code>  var a = 1;
   var b = a + 1;
-</code></pre></li>
+</code></pre>
+			</li>
 			<li>
 				<p>Begin the code block with three backticks and the name of the language, write the lines of code, and then end with three more backticks.</p>
 			</li>
@@ -250,21 +265,25 @@ Plus Sign bullet points
   var age = 25;
   var name = "Past Dustin";
   ```
-</code></pre></li>
+</code></pre>
+			</li>
 			<li>
 				<p>If writing inline code, wrap it in backticks.</p>
 				<pre><code>  This `&lt;p&gt;` will be formatted as code.
-</code></pre></li>
+</code></pre>
+			</li>
 			<li>
 				<p>The <code>diff</code> feature is used to visually indicate changes.</p>
 				<ul>
 					<li>Lines beginning with a minus sign (-) will be rendered as red deletions.</li>
-					<li>Lines beginning with a plus sign (+) will be rendered as green additions.<pre><code>  ```diff
+					<li>Lines beginning with a plus sign (+) will be rendered as green additions.
+						<pre><code>  ```diff
   var x = 100;
   * var y = 200;
   - var y = 300;
   ```
-</code></pre></li>
+</code></pre>
+					</li>
 				</ul>
 			</li>
 		</ul>
@@ -279,7 +298,8 @@ Plus Sign bullet points
 				<pre><code>  | Column 1 Heading | Column 2 Heading | Column 3 Heading |
   |:-----------------|:----------------:|-----------------:|
   | Left-aligned | Centered | Right-aligned |
-</code></pre></li>
+</code></pre>
+			</li>
 		</ul>
 		<h4 id="checkboxes">Checkboxes</h4>
 		<ul>
@@ -289,10 +309,11 @@ Plus Sign bullet points
 				<pre><code>  * [ ] Task 1
   * [x] Task 2
   * [ ] Task 3
-</code></pre></li>
+</code></pre>
+			</li>
 		</ul>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.1/jquery.smooth-scroll.min.js"></script>
 		<script src="scripts/script.js"></script>
 
 	</body>
